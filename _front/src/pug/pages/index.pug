@@ -1,0 +1,42 @@
+doctype html
+html(lang ="en")
+    head
+        title LPA
+        meta(charset="utf-8")
+        meta(name="description" content="")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+        
+        link(rel="preload" href="fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin)
+        link(rel="preload" href="fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin)
+        link(rel="preload" href="fonts/Roboto-Medium.ttf" as="font" type="font/ttf" crossorigin)
+        link(rel="preload" href="fonts/Arial.ttf" as="font" type="font/ttf" crossorigin)
+
+        link(rel="stylesheet" type="text/css" href="css/libs.min.css")
+        link(rel="stylesheet" type="text/css" href="css/main.css")
+        //link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+
+    body
+
+        //- svg(class="icon")
+        //-     use(xlink:href="img/svg/symbol/sprites.svg#logo-icon")
+
+        //- picture 
+        //-     source(srcset="img/webp/blog-img1.webp" type="image/webp")
+        //-     img(src = "img/blog-img1.jpg" alt="")
+
+        //- include ../includes/header
+        //- include ../includes/sidebar
+
+        //- include ../includes/for-visitors/main-content
+
+        //- include ../includes/footer
+
+        .contact 
+            p.contact__naming Санкт-Петербург
+            a.contact__info(href='tel:+78124480897') 8 (812) 448-08-97
+
+
+
+
+    script(src="js/libs.min.js")
+    script(src="js/main.js" defer)

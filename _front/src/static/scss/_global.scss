@@ -1,0 +1,108 @@
+._error{
+    border-bottom: 1px solid #FF0000;
+  }
+  
+  .accent{
+    color: $accent;
+  }
+  
+  
+  .link{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $accent;
+    text-decoration: underline;
+  
+    transition: .4s ease;
+  
+    &:hover{
+      color: $orange;
+    }
+  
+    svg{
+      fill: $white;
+      transition: .4s ease;
+    }
+  }
+  
+  .btn-blue{
+    @include text16();
+    color: $white;
+    background-color: $accent;
+    border: 1px solid $accent;
+    padding: 22px 46px;
+  
+    transition: .4s ease;
+  
+    &:hover{
+      background-color: transparent;
+      color: $accent;
+  
+      svg{
+        fill: $accent;
+      }
+    }
+  }
+  
+  .btn-black{
+    @include text16();
+    color: $white;
+    background-color: $black;
+    border: 1px solid $white;
+    padding: 22px 46px;
+  
+    transition: .4s ease;
+  
+    &:hover{
+      background-color: $white;
+      color: $black;
+    }
+  }
+  
+  .btn-orange{
+    @include text16();
+    color: $orange;
+    transition: .4s ease;
+  
+    svg{
+      fill: $orange;
+      transition: .4s ease;
+    }
+  
+    &:hover{
+      color: $accent;
+  
+      svg{
+        fill: $orange;
+      }
+    }
+  }
+  
+  .contact{
+  
+    &__naming{
+      @include text22();
+      margin-bottom: 10px;
+    }
+  
+    &__info{
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      color: $dark-blue;
+  
+      transition: .4s ease;
+  
+      &:hover{
+        color: $accent;
+      }
+    }
+  }
+
+  .breadcrumbs{
+
+    display: flex;
+    align-items: center;
+  
+  }

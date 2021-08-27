@@ -1,0 +1,32 @@
+@keyframes scale {
+  0% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-35%, 0);
+  }
+
+}
+
+@keyframes pressButton {
+  0% {
+    width: 47px;
+    height: 47px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+
+}
