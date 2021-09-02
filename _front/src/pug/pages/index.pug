@@ -17,25 +17,19 @@ html(lang ="en")
 
     body
 
+        include ../includes/header.pug
+
+        include ../includes/main.pug
+
+        include ../includes/footer.pug
+
         //- svg(class="icon")
         //-     use(xlink:href="img/svg/symbol/sprites.svg#logo-icon")
 
         //- picture 
         //-     source(srcset="img/webp/blog-img1.webp" type="image/webp")
         //-     img(src = "img/blog-img1.jpg" alt="")
-
-        //- include ../includes/header
-        //- include ../includes/sidebar
-
-        //- include ../includes/for-visitors/main-content
-
-        //- include ../includes/footer
-
-        .contact 
-            p.contact__naming Санкт-Петербург
-            a.contact__info(href='tel:+78124480897') 8 (812) 448-08-97
-
-
+      
 
 
     script(src="js/libs.min.js")

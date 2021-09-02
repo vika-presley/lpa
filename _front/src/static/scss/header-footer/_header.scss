@@ -1,0 +1,257 @@
+.header{
+    overflow: hidden;
+    position: sticky;
+    background: $white;
+    z-index: 1000;
+    top: 0;
+
+    transition: .5s $transition-timing-func;
+
+    &__static{
+        background-color: $white;
+        padding: 15px 25px 15px 150px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        position: relative;
+        transition: .5s $transition-timing-func;
+
+    }
+
+    &__logo{
+        margin-right: auto;
+    }
+
+    &__contact{
+        margin-right: 20px;
+        margin-bottom: 0;
+
+        a{
+            margin-bottom: 0;
+        }
+    }
+
+    &__email{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: $accent;
+        position: relative;
+
+        margin-right: 20px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+
+            height: 1px;
+            width: 100%;
+            background-color: $accent;
+        }
+    }
+
+    &__social{
+        margin-right: 20px;
+
+        svg{
+            width: 20px;
+            height: 17px;
+            fill: $dark-blue;
+
+            transition: .4s ease;
+
+            &:hover{
+                fill: $blue;
+            }
+        }
+    }
+
+    &__sticky{
+        padding: 15px 25px 15px 150px;
+        background-color: $blue;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        
+        position: relative;
+        transition: .5s $transition-timing-func;
+    }
+
+    &__link{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+
+        position: relative;
+        margin-right: 70px;
+
+        @include link-hover($white);
+    }
+
+    &__btns{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__btn{
+        margin-right: 20px;
+
+        transition: .4s ease;
+
+        &:hover{
+            opacity: .7;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        svg{
+            width: 20px;
+            height: 20px;
+            fill: $white;
+        }
+
+    }
+
+    &__cart-btn svg{
+        width: 25px;
+    }
+
+    &__input-wrap{
+        position: relative;
+        visibility: hidden;
+
+        margin-right: 100px;
+        overflow: hidden;
+
+        input{
+            padding: 9px 35px;
+            font-size: 18px;
+            color: $gray;
+
+            background-color: #f5f5f5;
+            border: none;
+
+            position: relative;  
+            bottom: -100px;
+
+            transition: .4s $transition-timing-func;
+            z-index: 1;
+        }
+
+        &.active{
+            visibility: visible;
+            z-index: 100;
+
+            input{
+                bottom: 0; 
+            }
+
+            svg{
+                top: 50%;
+            }
+        }
+    }
+
+    &__input-close{
+        visibility: hidden;
+        position: absolute;
+        z-index: -10;
+    }
+
+    &__input-icon{
+        z-index: 2;
+        position: absolute;
+        left: 10px;
+        top: 150%;
+        transform: translateY(-50%);
+
+        width: 15px;
+        height: 15px;
+        fill: $gray;
+
+        transition: .4s $transition-timing-func;
+    }
+}
+
+
+.logo{
+    fill: $blue;
+    width: 325px;
+    height: 70px;
+}
+
+
+.nav{
+    margin-right: auto;
+
+    &__list{
+        display: flex;
+    }
+
+    &__list-item{
+        margin-right: 20px;
+
+        a{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            color: $white;
+            @include link-hover($white);
+
+        }
+
+    }
+
+  }
+  
+
+  .city-toggle{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: $dark-blue;
+
+    &__icon{
+    margin-left: 3px;
+      width: 10px;
+      height: 10px;
+      fill: transparent;
+      stroke: $dark-blue;
+    }
+  }
+
+  .burger{
+      position: absolute;
+      visibility: hidden;
+
+    &__stripe{
+        width: 25px;
+        height: 2px;
+        background-color: $blue;
+
+        transition: .4s ease;
+        margin-bottom: 5px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+  }
+  
+  .mobile-nav{
+      position: absolute;
+      z-index: 50;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+  }

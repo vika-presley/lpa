@@ -1,23 +1,39 @@
+.noscroll{
+  overflow: hidden;
+}
+
+.appear-animation{
+  opacity: 0;
+  transition: .3s opacity;
+}
+
+.visually-hidden{
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 ._error{
     border-bottom: 1px solid #FF0000;
   }
   
   .accent{
     color: $accent;
+    fill: $accent;
   }
-  
   
   .link{
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
-    color: $accent;
+    color: $blue;
     text-decoration: underline;
   
     transition: .4s ease;
   
     &:hover{
-      color: $orange;
+      color: $accent;
     }
   
     svg{
@@ -27,28 +43,82 @@
   }
   
   .btn-blue{
-    @include text16();
+    display: block;
+    width: fit-content;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
     color: $white;
-    background-color: $accent;
-    border: 1px solid $accent;
+    background-color: $blue;
+    border: 1px solid $blue;
     padding: 22px 46px;
   
     transition: .4s ease;
+
+    white-space: nowraps;
+
+    svg{
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+
+      fill: $white;
+      transition: .4s ease;
+    }
   
     &:hover{
       background-color: transparent;
-      color: $accent;
+      color: $blue;
   
       svg{
-        fill: $accent;
+        fill: $blue;
       }
+    }
+
+    
+    @media  screen and (max-width: 1023px) {
+
+      padding: 16px 40px;
+      font-size: 14px;
+      line-height: 120%;
+
+      svg{
+        width: 16px;
+        height: 14px;
+      }
+      
+    }
+
+    @media  screen and (max-width: 600px) {
+
+      padding-top: 12px;
+      padding-bottom: 12px;
+     
+
+      box-sizing: border-box;
+
+      width: 100%;
+      display: block;
+      text-align:  center;
+      
+    }
+    @media  screen and (max-width:360px) {
+
+      padding: 12px 35px;
+      
     }
   }
   
   .btn-black{
-    @include text16();
+    display: block;
+    width: fit-content;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
     color: $white;
-    background-color: $black;
+    background-color: transparent;
     border: 1px solid $white;
     padding: 22px 46px;
   
@@ -56,47 +126,190 @@
   
     &:hover{
       background-color: $white;
-      color: $black;
+      color: $dark-blue;
     }
+
+    @media  screen and (max-width: 1023px) {
+
+      padding: 17px 90px;
+      font-size: 14px;
+      line-height: 120%;
+      
+    }
+
+    @media  screen and (max-width: 600px) {
+
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      box-sizing: border-box;
+      text-align: center;
+      
+    }
+  }
+
+  .btn-white{
+    display: block;
+    width: fit-content;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $dark-blue;
+    background-color: $white;
+    border: 1px solid $white;
+    padding: 22px 46px;
+  
+    transition: .4s ease;
+  
+    &:hover{
+      background-color: transparent;
+      color: $white;
+    }
+
+    @media  screen and (max-width: 600px) {
+
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: block;
+      text-align:  center;
+      
+    }
+
   }
   
   .btn-orange{
-    @include text16();
-    color: $orange;
+    display: block;
+    width: fit-content;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+
+    color: $accent;
+
     transition: .4s ease;
+    position: relative;
   
-    svg{
-      fill: $orange;
+    &::after{
+      content: "";
+      mask: url('../img/orange-arrow-icon.svg');
+      mask-size: cover;
+      background-color: $accent;
+
+      width: 25px;
+      height: 11px;
+
+      position: absolute;
+      right: -35px;
+      top: 5px;
+
       transition: .4s ease;
     }
   
     &:hover{
-      color: $accent;
+      cursor: pointer;
+      color: $blue;
   
-      svg{
-        fill: $orange;
+      &::after{
+        background-color: $blue
+      }
+    }
+
+    @media screen and(max-width: 600px) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+
+      &::after{
+        width: 22px;
+        height: 9px;
       }
     }
   }
   
   .contact{
+    margin-bottom: 30px;
   
     &__naming{
       @include text22();
       margin-bottom: 10px;
+      max-width: 330px;
+
+      &_mb30{
+        margin-bottom: 30px;
+      }
     }
   
     &__info{
+      display: block;
+      margin-bottom: 20px;
+
       font-weight: 500;
       font-size: 22px;
       line-height: 26px;
       color: $dark-blue;
-  
+
+      svg{
+        fill: $dark-blue;
+        transition: .4s ease;
+        width: 25px;
+        height: auto;
+        max-height: 21px;
+
+        margin-right: 40px;
+      }
+    }
+
+    a{
       transition: .4s ease;
   
       &:hover{
-        color: $accent;
+        color: $blue;
+
+        svg{
+          fill: $blue;
+        }
       }
+
+    }
+
+    &__email{
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        height: .7px;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    &__socials{
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and(max-width: 600px) {
+
+      margin-bottom: 20px;
+
+      &__naming{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      &__info{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        margin-bottom: 10px;
+      }
+      
     }
   }
 
@@ -106,3 +319,139 @@
     align-items: center;
   
   }
+
+  .madeby{
+    font-family: "Arial-lpa", sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.6);
+    transition: .4s ease;
+
+    &:hover{
+    color: rgba(255, 255, 255, 1);
+
+      .red{
+        color: $white;
+      }
+    }
+
+    span{
+      color: $white;
+      font-weight: bold;
+      transition: .4s ease;
+    }
+
+    .red{
+      color: #E72144;
+      font-size: 25px;
+      position: relative;
+      bottom: -.25px;
+      right: -.5px;
+      transition: .4s ease;
+    }
+  }
+
+  .mobile{
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .check{
+    display: flex;
+    align-items: center;
+
+    &__input{
+      appearance: none;
+      position: absolute;
+
+      &:checked + .check__box svg{
+        opacity: 1;
+      }
+
+      &:checked + .check__box{
+        background: $dark-blue;
+      }
+
+      &:focus + .check__box {
+        box-shadow:0 0 0 0.5px #000;
+      }
+
+    
+    }
+
+    &__box{
+      width: 20px;
+      height: 20px;
+      border: 1px solid #061231;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-right: 10px;
+
+      &._error{
+
+        & + .check__text{
+          color: #E72144;
+        }
+
+        & + .check__text .check__link{
+          color: #E72144;
+
+          &::before{
+            background-color: #E72144;
+          }
+        }
+      }
+
+
+      svg{
+        opacity: 0;
+        fill: $white;
+        transition: .3s;
+
+        width: 18px;
+        height: 16px;
+      }
+    }
+
+    &__text{
+      font-size: 12px;
+      line-height: 120%;
+      letter-spacing: 0.03em;
+      color: $dark-blue;
+    }
+
+    &__link{
+      font-size: 12px;
+      line-height: 120%;
+      letter-spacing: 0.03em;
+      color: $dark-blue;
+
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        background-color: $dark-blue;
+        width: 100%;
+        height: 1px;
+
+        bottom: -1px;
+        left: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+
+      &__text{
+        font-size: 10px;
+        line-height: 120%;
+      }
+      
+    }
+
+
+  }
+

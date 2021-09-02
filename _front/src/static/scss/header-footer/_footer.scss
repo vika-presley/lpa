@@ -1,0 +1,143 @@
+.footer{
+    background-color: $dark-gray;
+    @include container();
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    &__logo{
+        margin-bottom: 30px;
+
+        svg{
+            width: 215px;
+            height: 46px;
+            fill: $white;
+        }
+    }
+
+    &__info-text{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 140%;
+        color: $white;
+        margin-bottom: 30px;
+        margin-top: 25px;
+
+        max-width: 317px;
+
+    }
+
+    &__info-btn{
+        display: inline-block;
+        padding-left: 60px;
+        padding-right: 60px;   
+    }
+
+    &__link{
+        margin-bottom: 10px;
+
+        a{
+            @include text16();
+            color: $white;
+            opacity: .5;
+
+            transition: .4s ease;
+
+            &:hover{
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+
+    &__contact{
+        margin-bottom: 10px;
+
+        p{
+            opacity: .5;
+        }
+
+        p, a{
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
+        }
+
+    }
+
+    &__details{
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-link{
+            @include text14();
+            color: $white;
+            opacity: .4;
+
+            transition: .4s ease;
+
+            &:hover{
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+}
+
+.footer-socials{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+
+    a{
+        margin-right: 30px;
+    }
+
+    &__icon{
+        fill: $white;
+        width: 25px;
+        height: 15px;
+
+        transition: .4s ease;
+
+        &.youtube{
+            height: 20px;
+        }
+
+        &.tg{
+            height: 16px;
+        }
+
+        &:hover{
+            opacity: .6;
+        }
+    }
+}
+
+.footer-nav{
+    &__list-item{
+        margin-bottom: 10px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: $white;
+
+            transition: .4s ease;
+
+            &:hover{
+                opacity: .6;
+            }
+        }
+    }
+}
